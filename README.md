@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-![header](https://capsule-render.vercel.app/api?type=Waving&color=ffffff&height=300&section=header&text=Hi!%20I'm%20grimza99&fontSize=90)
+![header](https://capsule-render.vercel.app/api?type=Waving&color=DAABF2&height=300&section=header&text=Hi!%20I'm%20grimza99&fontSize=90&fontColor=ffffff)
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
