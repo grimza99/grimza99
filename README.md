@@ -39,6 +39,14 @@ I love exploring React’s core principles, Next.js App Router, and modern front
 
 <hr/>
 
+### 🔨Author 
+
+[@grimza99/react-async-boundary](https://github.com/grimza99/react-async-boundary)
+
+→ Integrated React Suspense + ErrorBoundary wrapper for async components
+
+<hr/>
+
 ### 🚀 Tech Stack
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
