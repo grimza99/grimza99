@@ -1,42 +1,41 @@
 function solution(n, wires) {
     let diff = n
     
-    const getGraph = (skipIdx)=> {
-        let graph = Array.from({length:n+1},()=>[])
-        wires.forEach(([a,b],idx)=> {
-            if(idx ===skipIdx) return
-            graph[a].push(b)
-            graph[b].push(a)
-        })
+    const getGraph = (skipIdx) => {
+        const graph = Array.from({length:n+1},()=>[])
         
+        wires.forEach(([a,b],idx)=> {
+            if (idx ===skipIdx) return
+                graph[a].push(b)
+                graph[b].push(a)
+        })
         return graph
     }
     
-    const dfs = (graph)=> {
-        let count = 1
-        let visited = Array.from({length:n+1},()=>false)
-        let nodeArr = [1]
+    const bfs = (graph) => {
+        const visited = Array(n+1).fill(false)
         visited[1] = true
+        let count = 1
+        let queue = [1]
         
-        while (nodeArr.length > 0) {
-            const node = nodeArr.shift()
-            for (const next of graph[node]){
+        while (queue.length) {
+            const node = queue.shift()
+            for (const next of graph[node]) {
                 if (!visited[next]) {
-                    nodeArr.push(next)
-                    visited[next]=true
+                    visited[next] =true
+                    queue.push(next)
                     count++
                 }
-            } 
+            }
         }
         return count
     }
     
-    for (let i = 0 ; i < wires.length; i++) {
+    for (let i = 0 ; i < wires.length;i++ ) {
         const graph = getGraph(i)
-        const nodeCount = dfs(graph)
-        const anotherNode = n-nodeCount
-        diff = Math.min(diff,Math.abs(anotherNode-nodeCount) )
+        const node = bfs(graph)
+        const anotherNode = n-node
+        diff = Math.min(diff,Math.abs(node-anotherNode))
     }
-    
-    return diff;
+    return diff
 }
